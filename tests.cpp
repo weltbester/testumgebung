@@ -1,6 +1,6 @@
 /*
  * Copyright: Georg Pohl, 70174 Stuttgart, et al.
- * Filename: Aufg_5.19_MorseCode.cpp
+ * Filename: tests.cpp
  */
  #include <iostream>
  #include <map>
@@ -12,10 +12,10 @@
 /* Instance Variables */
 
 /* Prototypes */
-void fillMapWithMorseCode(map<char, string> &m);
+
 
 int main() {
-    map<char, string> morseCode;
+
 
 
     cout << endl;
@@ -23,6 +23,3 @@ int main() {
 } // main
 
 /* Functions */
-void fillMapWithMorseCode(map<char, string> &m) {
-    m.put('A', "._");
-}
