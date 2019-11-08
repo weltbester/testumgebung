@@ -1,53 +1,51 @@
 /*
  * Copyright: Georg Pohl, 70174 Stuttgart, et al.
- * Filename: tests.cpp
+ * Filename: CheckoutLineClass.cpp
  */
  #include <iostream>
- #include <queue>
- #include <stack>
- #include <map>
+ #include <iomanip>
+ #include "queue.h"
+ #include "random.h"
  using namespace std;
 
  /* CONSTANTS */
-
+ const double ARRIVAL_PROBABILITY = 0.05;
+ const int MIN_SERVICE_TIME = 5;
+ const int MAX_SERVICE_TIME = 15;
+ const int SIMULATION_TIME = 2000;
 
 /* Instance Variables */
 
 /* Prototypes */
-void collapse(queue<int> &);
 
+/*
+ * Class: CheckoutLineSimulation
+ * -----------------------------
+ * This class encapsulates the code and data for the simulation.
+ */
 
-int main() {
-    queue<int> qu;
+ class CheckoutLineSimulation {
+ public:
+    void runSimulation(int &nServed, int &totalWait, int &totalLength) {
+        Queue<int> queue;
+    }
+    void printReport() {
 
-    qu.push(7);
-    qu.push(2);
-    qu.push(8);
-    qu.push(9);
-    qu.push(4);
-    qu.push(13);
-    qu.push(7);
-    qu.push(1);
-    qu.push(9);
-    qu.push(10);
+    }
 
-    collapse(qu);
+ private:
+    int nServed;        /* Number of customers served */
+    int totalWait;      /* Sum of all customer waiting times */
+    int totalLength;    /* Sum of the queue length at each time step */
+ }
 
+ /* Main Program */
 
-    cout << endl;
-    return 0;
-} // main
+ int main() {
+     CheckoutLineSimulation simulation;
+     simulation.runSimulation();
+     simulation.printReport();
+     return 0;
+ }
 
 /* Functions */
-void collapse(queue<int> &q) {
-    int temp;
-    stack<int> st1;
-    stack<int> str2;
-
-    while (!q.empty()) {
-        temp = q.pop();
-        st1.push(temp);
-    }
-    cout << st1.top() << endl;
-}
-// {7, 2, 8, 9, 4, 13, 7, 1, 9, 10}
