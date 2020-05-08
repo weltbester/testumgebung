@@ -2,7 +2,7 @@
  * Copyright May 2020: Georg Pohl, 70174 Stuttgart
  * File: chapter05_exercise15.cpp
  * ------------------------------
- * Rolling stack
+ * Description: Vorlage fuer CPP Testprogramme
  */
 
 #include <iostream>
